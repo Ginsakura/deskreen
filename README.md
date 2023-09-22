@@ -2,15 +2,19 @@
 
 [![Github All Releases](https://img.shields.io/github/downloads/pavlobu/deskreen/total.svg)]()
 
-![Deskreen Logo](https://raw.githubusercontent.com/Ginsakura/deskreen/FarawayWar/resources/icon.png)
+![Deskreen Logo](https://raw.githubusercontent.com/Ginsakura/deskreen/StayAwayFromWar/resources/icon.png)
 
 ### Website: https://deskreen.com
 
-![release all os -- no code signing](https://github.com/pavlobu/deskreen/workflows/release%20all%20os%20--%20no%20code%20signing/badge.svg)
-![build-and-test](https://github.com/pavlobu/deskreen/workflows/build%20and%20test/badge.svg)
-![codecov-generate](https://github.com/pavlobu/deskreen/workflows/codecov/badge.svg)
-[![codecov](https://codecov.io/gh/pavlobu/deskreen/branch/master/graph/badge.svg?token=fqfBlyXT5O)](https://codecov.io/gh/pavlobu/deskreen)
+![release all os -- no code signing](https://github.com/Ginsakura/deskreen/workflows/release%20all%20os%20--%20no%20code%20signing/badge.svg)
+![build-and-test](https://github.com/Ginsakura/deskreen/workflows/build%20and%20test/badge.svg)
+![codecov-generate](https://github.com/Ginsakura/deskreen/workflows/codecov/badge.svg)
+[![codecov](https://codecov.io/gh/Ginsakura/deskreen/branch/master/graph/badge.svg?token=fqfBlyXT5O)](https://codecov.io/gh/Ginsakura/deskreen)
 ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20MacOS%20%7C%20Linux-lightgrey)
+
+---
+
+I only want to use application
 
 ---
 
