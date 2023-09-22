@@ -6,22 +6,6 @@ on:
 name: release all os -- no code signing
 
 jobs:
-  create-release:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2.3.1
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Deskreen Release ${{ github.ref }}
-          draft: true
-          prerelease: false
-
   release:
     name: Deskreen Release
     runs-on: ${{ matrix.os }}
@@ -29,12 +13,12 @@ jobs:
     strategy:
       matrix:
         include:
-          # - os: ubuntu-18.04 # IMPORTANT!!! this LINUX os should be the same as in build-and-test and covecov workflows! this is for making sure caches are used in most efficient way
-          #   artifact_name: 'release/{*.AppImage,*.rpm,*.deb,*.yml}'
+          - os: ubuntu-18.04 # IMPORTANT!!! this LINUX os should be the same as in build-and-test and covecov workflows! this is for making sure caches are used in most efficient way
+            artifact_name: 'release/{*.AppImage,*.rpm,*.deb,*.yml}'
           - os: windows-2019
             artifact_name: 'release/{*.msi,*.exe,*.blockmap,*.yml}'
-          # - os: macos-10.15
-          #   artifact_name: 'release/{*.dmg,*.blockmap,*.yml}'
+          - os: macos-10.15
+            artifact_name: 'release/{*.dmg,*.blockmap,*.yml}'
 
     steps:
       - name: Checkout code
@@ -116,3 +100,20 @@ jobs:
           file: ${{ matrix.artifact_name }}
           tags: true
           draft: true
+
+  create-release:
+    needs: release
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2.3.1
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v2.0.4fix
+          release_name: Deskreen Release v2.0.4fix
+          draft: true
+          prerelease: false
