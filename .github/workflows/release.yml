@@ -1,7 +1,7 @@
 on: 
   push: 
-    branches:
-    - 'FarawayWar'
+    tags:
+      - "v*"
 
 name: release all os -- no code signing
 
