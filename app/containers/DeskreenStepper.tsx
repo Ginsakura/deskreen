@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useState, useCallback, useContext, useEffect } from 'react';
-import { ipcRenderer, shell } from 'electron';
+import ipcRenderer from 'electron';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
