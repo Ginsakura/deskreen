@@ -2,7 +2,7 @@
 
 [![Github All Releases](https://img.shields.io/github/downloads/pavlobu/deskreen/total.svg)]()
 
-![Deskreen Logo](https://raw.githubusercontent.com/Ginsakura/deskreen/master/resources/icon.png)
+![Deskreen Logo](https://raw.githubusercontent.com/Ginsakura/deskreen/FarawayWar/resources/icon.png)
 
 ### Website: https://deskreen.com
 
