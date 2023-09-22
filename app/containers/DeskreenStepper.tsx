@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useState, useCallback, useContext, useEffect } from 'react';
-import ipcRenderer from 'electron';
+import { ipcRenderer } from 'electron';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -14,10 +14,10 @@ import {
   H4,
   H5,
   Icon,
-  Position,
+  // Position,
   Spinner,
   Text,
-  Tooltip,
+  // Tooltip,
 } from '@blueprintjs/core';
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
@@ -76,10 +76,10 @@ const DeskreenStepper = React.forwardRef((_props, ref) => {
   const [isSelectLanguageDialogOpen, setIsSelectLanguageDialogOpen] = useState(
     false
   );
-  const [
-    isStandForUkraineDialogOpen,
-    setIsStandForUkraineDialogOpen,
-  ] = useState(true);
+  // const [
+  //   isStandForUkraineDialogOpen,
+  //   setIsStandForUkraineDialogOpen,
+  // ] = useState(true);
   const [isDisplayHelloWord, setIsDisplayHelloWord] = useState(true);
   const [helloWord, setHelloWord] = useState('Hello');
 
