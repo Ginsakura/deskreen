@@ -7,7 +7,7 @@ name: release all os -- no code signing
 
 jobs:
   create-release:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2.3.1
@@ -27,11 +27,11 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: ubuntu-18.04
+          - os: ubuntu-latest
             artifact_name: 'release/{*.AppImage,*.rpm,*.deb,*.yml}'
           - os: windows-2019
             artifact_name: 'release/{*.msi,*.exe,*.blockmap,*.yml}'
-          - os: macos-10.15
+          - os: macos-latest
             artifact_name: 'release/{*.dmg,*.blockmap,*.yml}'
     runs-on: ${{ matrix.os }}
     steps:
