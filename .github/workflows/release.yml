@@ -17,8 +17,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v2.0.4fix
-          release_name: Deskreen Release v2.0.4fix
+          tag_name: v2.0.4fix2
+          release_name: Deskreen Release v2.0.4fix2
           draft: true
           prerelease: false
 
