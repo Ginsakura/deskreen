@@ -1,7 +1,7 @@
 on: 
   push: 
-    branches:
-    - 'StayAwayFromWar'
+    tags:
+      - "v*"
 
 name: release all os -- no code signing
 
@@ -17,8 +17,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
-          tag_name: v2.0.4fix2
-          release_name: Deskreen Release v2.0.4fix2
+          tag_name: ${{ github.ref }}
+          release_name: Deskreen Release ${{ github.ref }}
           draft: true
           prerelease: false
 
